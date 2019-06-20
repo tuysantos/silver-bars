@@ -1,0 +1,33 @@
+<div class="container dashboard">
+  <div class="row">
+    <div class="col-sm-12">
+      <span id="spMainTitle" class="spTitle">Live Order Board</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      
+      <div class="top-area">
+        <div class="filter-wrapper">
+          <app-order-filter (orderTypeEvent)="setOrderTypeEvent($event)" (listTypeEvent)="setListTypeEvent($event)"></app-order-filter>
+        </div>
+        <div class="button-location">
+          <button class="btn btn-primary" (click)="addOrder()">Add Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="listTypeId === 1 && orderList">
+      <div class="col-sm-12">
+        <app-order-list [orderList]="orderList" (deleteEvent)="deleteOrder($event)"></app-order-list>
+      </div>
+  </div>
+
+  <div class="row" *ngIf="listTypeId === 2">
+      <div class="col-sm-12">
+        <app-order-summary [summaryList]="orderSummary"></app-order-summary>
+      </div>
+  </div>
+</div>

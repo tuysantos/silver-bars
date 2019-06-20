@@ -1,0 +1,23 @@
+.dashboard {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 30px;
+    .spMainTitle {
+        font-weight: 900;
+        color: #000000;
+        margin-top: 20px;
+        display: block;
+    }
+
+    .top-area {
+        margin-top: 20px;
+        .filter-wrapper {
+            float: left;
+        }
+        .button-location {
+            float: right;
+            margin-right: 20px;
+        }
+    }
+}

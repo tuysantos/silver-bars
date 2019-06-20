@@ -1,0 +1,24 @@
+<div class="order-list">
+  <table class="table table-striped table-hover">
+    <thead>
+        <tr class="grid-header def-header">
+          <th>User</th>
+          <th>Qty</th>
+          <th>Price</th>
+          <th>Type</th>
+          <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let order of orderList; trackBy: trackByFn">
+          <td>{{ order.userId }}</td>
+          <td>{{ order.order_qty }}Kg</td>
+          <td>{{ order.price | currency: 'GBP'}}</td>
+          <td>{{ order.order_type.name }}</td>
+          <td>
+              <button class="btn btn-warning" (click)="deleteOrder(order.orderId)">Cancel</button>
+          </td>
+        </tr>
+    </tbody>
+  </table>
+</div>

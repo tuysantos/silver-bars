@@ -1,0 +1,28 @@
+.new-order {
+    margin-top: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    .spMainTitle {
+        font-size: 18px;
+        font-weight: 900;
+        color: #000000;
+        display: block;
+    }
+
+    .left-al {
+        text-align: left;
+        margin-top: 15px;
+    }
+
+    .btn-footer {
+        margin-top: 20px
+    }
+
+    .money-size {
+        width: 150px;
+    }
+
+    .text-size {
+        width: 250px;
+    }
+}

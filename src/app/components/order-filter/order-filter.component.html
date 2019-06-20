@@ -1,0 +1,18 @@
+<div class="order-filter">
+  <table>
+    <tr>
+      <th>List Type:&nbsp;</th>
+      <td class="left-al">
+        <input type="radio" value="1" class="rdSelect" name="rdListType" (click)="setListType(1)" checked>All Orders &nbsp;&nbsp;
+        <input type="radio" value="2" class="rdSelect" name="rdListType" (click)="setListType(2)">Summary
+      </td>
+    </tr>
+    <tr *ngIf="listType === 2">
+        <th>Order Type:&nbsp;</th>
+        <td class="left-al">
+          <input type="radio" value="1" class="rdSelect" name="rdOrderType" (click)="setOrderType(1)" checked>BUY &nbsp;&nbsp;
+          <input type="radio" value="2" class="rdSelect" name="rdOrderType" (click)="setOrderType(2)">SELL
+        </td>
+      </tr>
+  </table>
+</div>

@@ -1,0 +1,53 @@
+<div class="container new-order">
+  <form novalidate>
+    <div class="row">
+      <div class="col-sm-12">
+        <span id="spMainTitle" class="spTitle">New Order</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2 left-al">
+          <label for="userName">User Name</label>
+      </div>
+      <div class="col-sm-10">
+          <input type="text" class="form-control text-size" id="userName" name="userName" placeholder="User Name" [(ngModel)]="order.userId">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-2 left-al">
+          <label for="orderQty">Quantity</label>
+      </div>
+      <div class="col-sm-10">
+          <input type="text" maxlength="5" class="form-control money-size" id="orderQty" name="orderQty"  placeholder="Kg" [(ngModel)]="order.order_qty">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-2 left-al">
+          <label for="priceValue">Price</label>
+      </div>
+      <div class="col-sm-10">
+          <input type="text" maxlength="5" class="form-control money-size" id="priceValue" name="priceValue" [(ngModel)]="order.price">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-2 left-al">
+          <label for="orderType1">Order Type</label>
+      </div>
+      <div class="col-sm-10">
+          <select name="lstOrderType" id="lstOrderType" class="form-control text-size" (change)="setDefault($event.target.value)">
+              <option *ngFor="let item of orderTypes" [value]="item.id">{{item.name}}</option>
+          </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 btn-footer">
+          <button class="btn btn-primary" (click)="saveOrder()">Save</button>&nbsp;&nbsp;&nbsp;
+          <button class="btn btn-secundary" (click)="cancelOrder()">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>
